@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Stellar Dynamics near a Massive Black Hole</title>
+<meta name="author" content="(Ben Bar-Or and Tal Alexander  (export-snippet (:back-end html :value <br><h3>Weizmann Institute of Science</h3> :begin 30 :end 81 :post-blank 0 :parent #0)))"/>
+
+<link rel="stylesheet" href="./css/reveal.css"/>
+<link rel="stylesheet" href="./css/theme/night.css" id="theme"/>
+<link rel="stylesheet" href="./WIS2015.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h1>Stellar Dynamics near a Massive Black Hole</h1><h2><br></h2><h2>Ben Bar-Or and Tal Alexander <br><h3>Weizmann Institute of Science</h3></h2>
+</section>
+
+<section>
+<section id="slide-orgheadline1">
+<h2 id="orgheadline1">The Galactic center is a rich environment</h2>
+<div class="grid"> <div class="row"> <div class="col-6">
+<ul>
+<li>Extremely dense stellar system</li>
+<li>We can observe individual stars</li>
+<li>Observations indicate a Massive Black Hole
+\(M=4\times10^{6}M_{\mathrm{sun}}\)</li>
+<li>A “lab” for testing general relativity</li>
+<li>Most of the stellar objects are unobservable</li>
+<li>A “lab” for studying statistical physics of a stellar system</li>
+
+</ul>
+</div> <div class="col-6"><div id="container">
+<div class="fragment fade-out abs" data-fragment-index="1">
+
+<div class="figure">
+<p><img src="./figs/Schoedel07_f1.png" alt="Schoedel07_f1.png" width="80%" />
+</p>
+</div>
+<font size="3">
+<p>
+Schödel et al. (2007)
+</p>
+</font>
+</div><div class="fragment current-visible abs" data-fragment-index="1">
+
+<div class="figure">
+<p><img src="./figs/Schoedel07_f1.png" alt="Schoedel07_f1.png" width="80%" />
+</p>
+</div>
+<font size="3">
+<p>
+Schödel et al. (2007)
+</p>
+</font>
+</div><div class="fragment current-visible abs" data-fragment-index="2">
+<p>
+The S-stars cluster
+</p>
+
+<div class="figure">
+<p><img src="./figs/2013orbits_animfull.gif" alt="2013orbits_animfull.gif" width="90%" />
+</p>
+</div>
+</div><div class="fragment abs" data-fragment-index="3">
+<video data-autoplay src="figs\nbody.mp4"></video>
+<font size="5">
+<p>
+\(N\)-body simulation
+</p>
+</font>
+</div> </div> </div> </div></div>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline2">
+<h2 id="orgheadline2"><font color = "yellow">Statistical mechanics</font> of stellar systems is challenging</h2>
+<div class="grid"> <div class="row"> <div class="col-8">
+<h4 align="left">
+<p>
+Commonly used <font color = "yellow">Approximations:</font>
+</p>
+</h4>
+<ul>
+<li>Local interactions</li>
+<li>Instantaneous interactions: Markovian <font color = "yellow">(uncorrelated)</font> process</li>
+<li>Weak encounters: central limit</li>
+
+</ul>
+<h4 align="left">
+<p>
+Description by a <font color = "yellow">Fokker-Planck</font> (diffusion) equation:
+</p>
+</h4>
+<ul>
+<li>Random walk in velocities (energy and angular momentum)</li>
+<li>Slow Relaxation \(t_{\mathrm{relax}} \sim 10^{10}\,\mathrm{yr}\)</li>
+
+</ul>
+</div> <div class="col-4">
+<svg height="432pt" version="1.1" viewBox="0 0 576 432" width="576pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="
+M0 432
+L576 432
+L576 0
+L0 0
+L0 432" style="fill:none;"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path clip-path="url(#p7ff5b81e1d)" d="
+M72 388.8
+L518.4 43.2
+L518.4 43.2" style="fill:none;stroke:#ffffff;stroke-dasharray:6.000000,6.000000;stroke-dashoffset:0.0;stroke-width:4;"/>
+   </g>
+   <g id="line2d_2">
+    <path clip-path="url(#p7ff5b81e1d)" d="
+M72 388.8
+L113.557 356.766
+L135.899 339.834
+L154.667 325.888
+L171.2 313.873
+L186.393 303.098
+L200.692 293.223
+L214.544 283.928
+L227.503 275.498
+L240.014 267.619
+L252.079 260.278
+L263.697 253.461
+L275.315 246.903
+L286.486 240.849
+L297.658 235.052
+L308.382 229.735
+L319.106 224.667
+L329.384 220.051
+L339.661 215.672
+L349.939 211.536
+L360.216 207.646
+L370.047 204.156
+L379.877 200.896
+L389.708 197.865
+L399.539 195.065
+L409.369 192.497
+L419.2 190.159
+L429.031 188.052
+L438.861 186.175
+L448.692 184.527
+L458.523 183.105
+L468.353 181.907
+L478.184 180.932
+L488.014 180.175
+L497.845 179.634
+L508.123 179.295
+L518.4 179.183
+L518.4 179.183" style="fill:none;stroke:#ffffff;stroke-linecap:square;stroke-width:4;"/>
+   </g>
+   <g id="line2d_3">
+    <defs>
+     <path d="
+M0 7.5
+C1.98902 7.5 3.89685 6.70975 5.3033 5.3033
+C6.70975 3.89685 7.5 1.98902 7.5 0
+C7.5 -1.98902 6.70975 -3.89685 5.3033 -5.3033
+C3.89685 -6.70975 1.98902 -7.5 0 -7.5
+C-1.98902 -7.5 -3.89685 -6.70975 -5.3033 -5.3033
+C-6.70975 -3.89685 -7.5 -1.98902 -7.5 0
+C-7.5 1.98902 -6.70975 3.89685 -5.3033 5.3033
+C-3.89685 6.70975 -1.98902 7.5 0 7.5
+z
+" id="m1b65db3adf" style="stroke:#0000ff;stroke-width:10;"/>
+    </defs>
+    <g clip-path="url(#p7ff5b81e1d)">
+     <use style="fill:#0000ff;stroke:#0000ff;stroke-width:10;" x="161.28" xlink:href="#m1b65db3adf" y="319.68"/>
+    </g>
+   </g>
+   <g id="line2d_4">
+    <g clip-path="url(#p7ff5b81e1d)">
+     <use style="fill:#0000ff;stroke:#0000ff;stroke-width:10;" x="339.84" xlink:href="#m1b65db3adf" y="250.56"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p7ff5b81e1d">
+   <rect height="345.6" width="446.4" x="72.0" y="43.2"/>
+  </clipPath>
+ </defs>
+</svg>
+<p>
+\(2\)-body encounter
+</p>
+</div></div>
+<p>
+\[\frac{\partial}{\partial
+t}f\left(E,t\right)=\frac{1}{2}\frac{\partial^{2}}{\partial
+E^{2}}\left[D_{2}\left(E\right)f\left(E,t\right)\right]-\frac{\partial}{\partial
+x}\left[D_{1}\left(E\right)f\left(E,t\right)\right]
+\]
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline3">
+<h2 id="orgheadline3">Long-time <font color = "yellow">correlations</font> are important</h2>
+<div class="grid"> <div class="row"> <div class="col-6">
+<h4 align="left">
+<p>
+<font color = "yellow">Resonant Relaxation</font> (Rauch &amp; Tremaine 1996):
+</p>
+</h4>
+<ul>
+<li>Stochastic residual torque</li>
+<li>Sort timescales (\(P < t < T_c\)): angular momentum changes coherently</li>
+<li>Longer timescales (\(T_c < t\)): random walk in angular momentum</li>
+<li>Relaxation can be fast: \(T_{RR}\approx\left(P/T_{\mathrm{coh}}\right)T_{\mathrm{relax}}\log\Lambda\)</li>
+
+</ul>
+
+</div> <div class="col-6"><div id="container">
+<div class="fragment fade-out abs" data-fragment-index="1">
+<video data-autoplay src="figs\nbody.mp4"></video>
+<font size="5">
+<p>
+\(N\)-body simulation
+</p>
+</font>
+</div><div class="fragment abs" data-fragment-index="1">
+<video data-autoplay src="figs\nwires.mp4"></video>
+<font size="5">
+<p>
+\(N\)-body simulation
+</p>
+</font>
+</div></div></div></div></div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline4">
+<h2 id="orgheadline4">The description of <font color = "yellow">resonant relaxation</font> is challenging</h2>
+<div class="grid"> <div class="row"> <div class="col-6">
+<h4 align="left">
+<p>
+Challenges:
+</p>
+</h4>
+<ul>
+<li>Long range interactions</li>
+<li>Long time <font color = "yellow">correlations</font></li>
+<li>Multiple timescales: <font color = "yellow">Non-Markovian</font> process</li>
+
+</ul>
+<h4 align="left">
+<p>
+Description by a <font color = "yellow">Fokker-Planck</font> equation?
+</p>
+</h4>
+</div> <div class="col-6">
+<video src="figs\nwires.mp4#t=30"></video>
+</div></div></div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline5">
+<h2 id="orgheadline5">The <font color = "yellow">Stochastic</font> approach</h2>
+<div class="grid"> <div class="row"> <div class="col-6">
+<ul>
+<li>Expand the potential due to extended orbital ellipses:
+\[U\left(a,e,\theta,\phi,\psi,t\right)=\sum_{l=0}^{\infty}\sum_{m=-l}^{l}\sum_{n=-l}^{l}D_{nm}^{l}\left(\psi,\theta,\phi\right)h_{nm}^{l}\left(a,e,t\right)\]</li>
+<li>Define the background torques as an effective noise: 
+\[\eta_{nm}^{l}\left(t\right)\equiv h_{nm}^{l}\left(t\right)-\left\langle h_{nm}^{l}\right\rangle\]</li>
+<li>Stochastic Equations of motion:
+\[\dot{\boldsymbol{J}}=-\tau_N(J)\hat{e}_\psi(\phi,\theta,\psi)\times\color{yellow}{\boldsymbol{\eta}(t)}\]</li>
+<li>Markovian approximation - <font color = "yellow">uncorrelated</font> noise:
+\[\left\langle \eta_{i}(t)\eta_j(t^\prime)\right\rangle
+  =\delta_{ij}\delta(t-t^\prime)\]</li>
+
+</ul>
+</div> <div class="col-6">
+<br><br><br><br>
+
+<div class="figure">
+<p><img src="./figs/Ylm_Dnlm_blackbg.png" alt="Ylm_Dnlm_blackbg.png" width="100%" />
+</p>
+</div>
+</div></div></div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline6">
+<h2 id="orgheadline6">Resonant Relaxation can be extremely efficient</h2>
+<div class="grid"> <div class="row"> <div class="col-6">
+<ul>
+<li>Random walk in phase space</li>
+<li>Much faster then \(2\)-body relaxation</li>
+<li>Relax to isotropic angular momentum</li>
+<li>Coherent time = Mass precession</li>
+<li><font color = "yellow">All stars will plunge into the massive black hole</font></li>
+
+</ul>
+</div> <div class="col-6">
+
+<div class="figure">
+<p><img src="./figs/fig_ser1_run1_2e6_small_inv.png" alt="fig_ser1_run1_2e6_small_inv.png" width="100%" />
+</p>
+</div>
+</div></div></div>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline7">
+<h2 id="orgheadline7"><font color = "yellow">General relativistic</font> effects restrict the relaxation</h2>
+<div class="grid"> <div class="row"> <div class="col-6">
+<ul>
+<li>Restricted random walk in phase space</li>
+<li><font color = "yellow">Protection against direct plunges</font></li>
+<li>Emission of Gravitational Waves</li>
+
+</ul>
+</div> <div class="col-6">
+
+<div class="figure">
+<p><img src="./figs/j_a_rel.png" alt="j_a_rel.png" width="100%" />
+</p>
+</div>
+<font size="5">
+<p>
+Post-Newtonian \(N\)-body simulation
+</p>
+</font>
+</div></div></div>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline8">
+<h2 id="orgheadline8">Relativistic stars precess fast</h2>
+<div class="grid"> <div class="row"> <div class="col-6">
+<ul>
+<li>Precession frequency diverge with eccentricity
+\[\nu_{GR}(j)=\frac{3}{j^{2}}\frac{r_{g}}{a}\nu_{r}\left(a\right)\]
+where \(j = J/J_{c}=\sqrt{1-e^{2}}\)</li>
+
+</ul>
+
+<div class="figure">
+<p><img src="./figs/prec.png" alt="prec.png" width="70%" />
+</p>
+</div>
+</div> <div class="col-6">
+<p>
+S2
+</p>
+
+<div class="figure">
+<p><img src="./figs/gill09f3.png" alt="gill09f3.png" width="50%" />
+</p>
+</div>
+<font size="3">
+<p>
+Ghez et al. (2008), Gillessen et al. (2009)
+</p>
+</font>
+<p>
+\[T_{GR}\approx2\times10^{3}P\]
+</p>
+
+</div></div></div>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline9">
+<h2 id="orgheadline9">The <font color = "yellow">diffusion equations</font> depend on the properties of the noise</h2>
+<div class="grid"> <div class="row"> <div class="col-6">
+<ul>
+<li>Stochastic Equations of motion:
+\[\dot{\boldsymbol{J}}=-\tau_N(J)\hat{e}_\psi(\phi,\theta,\psi)\times\color{yellow}{\boldsymbol{\eta}(t)}\]</li>
+<li><font color = "yellow">Correlated</font> noise:
+\[\left\langle \eta_{i}(t)\eta_j(t^\prime)\right\rangle
+  =\delta_{ij}C(t-t^\prime)\]</li>
+<li>Effective <font color = "yellow">Fokker-Planck</font>:
+\[ \frac{\partial}{\partial
+  t}f\left(j,t\right)=\frac{1}{2}\frac{\partial}{\partial j}\left\{
+  jD_{2}(j)\frac{\partial}{\partial
+  j}\frac{1}{j}f\left(j,t\right)\right\} \]</li>
+<li><font color = "yellow">Noise dependent</font> Diffusion Coefficient:
+\[ D_2(j) \propto\color{yellow}{{S_\eta}{\color{yellow}(\nu_GR(j))}}\]
+Proportional to the spectral power of the noise at the precession
+frequency.</li>
+
+</ul>
+</div> <div class="col-6"><div id="container">
+<div class="abs" data-fragment-index="1">
+<video data-autoplay src="figs\noise.mp4"></video>
+</div><div class="fragment abs" data-fragment-index="1">
+
+<div class="figure">
+<p><img src="./figs/acf_ft.png" alt="acf_ft.png" />
+</p>
+</div>
+</div></div></div></div></div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline10">
+<h2 id="orgheadline10">The time evolution depends on the noise properties</h2>
+<div class="grid"> <div class="row"><div class="col-4">
+<ul>
+<li>Good match between the stochastic equation of motions (circles)
+and the effective Fokker-plank (lines)</li>
+<li>Smooth (<font color = "red">Gaussian</font>) noise results in <font color = "yellow">adiabatic invariant</font></li>
+<li>Non-Smooth (<font color = "green">Exponential</font>) noise results in weak conservation of adiabatic
+invariant</li>
+
+</ul>
+</div> <div class="col-8"><div id="container">
+<div class="fragment fade-out abs" data-fragment-index="1">
+
+<div class="figure">
+<p><img src="./figs/cdf0.png" alt="cdf0.png" />
+</p>
+</div>
+</div><div class="fragment current-visible abs" data-fragment-index="1">
+
+<div class="figure">
+<p><img src="./figs/cdf1.png" alt="cdf1.png" />
+</p>
+</div>
+</div><div class="fragment current-visible abs" data-fragment-index="2">
+
+<div class="figure">
+<p><img src="./figs/cdf2.png" alt="cdf2.png" />
+</p>
+</div>
+</div><div class="fragment current-visible abs" data-fragment-index="3">
+
+<div class="figure">
+<p><img src="./figs/cdf3.png" alt="cdf3.png" />
+</p>
+</div>
+</div><div class="fragment current-visible abs" data-fragment-index="4">
+
+<div class="figure">
+<p><img src="./figs/cdf4.png" alt="cdf4.png" />
+</p>
+</div>
+</div><div class="fragment current-visible abs" data-fragment-index="5">
+
+<div class="figure">
+<p><img src="./figs/cdf5.png" alt="cdf5.png" />
+</p>
+</div>
+</div><div class="fragment abs" data-fragment-index="6">
+
+<div class="figure">
+<p><img src="./figs/cdf6.png" alt="cdf6.png" />
+</p>
+</div>
+</div> </div> </div> </div></div>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline11">
+<h2 id="orgheadline11">Resonant relaxation is efficiently quenched by GR precession</h2>
+<div class="grid"> <div class="row"><div class="col-6">
+
+<div class="figure">
+<p><img src="./figs/GC_model_dsty.png" alt="GC_model_dsty.png" />
+</p>
+</div>
+<font size="5">
+<p>
+Monte-Carlo simulation
+</p>
+</font>
+</div> <div class="col-6"><div id="container">
+<div class="fragment fade-out abs" data-fragment-index="1">
+
+<div class="figure">
+<p><img src="./figs/GC_model.png" alt="GC_model.png" />
+</p>
+</div>
+<font size="5">
+<p>
+Analytic model
+</p>
+</font>
+</div><div class="fragment abs" data-fragment-index="1">
+
+<div class="figure">
+<p><img src="./figs/GC_model_dsty_a.png" alt="GC_model_dsty_a.png" />
+</p>
+</div>
+<font size="5">
+<p>
+Analytic model
+</p>
+</font>
+</div> </div> </div> </div></div>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline12">
+<h2 id="orgheadline12">Summary</h2>
+<ul>
+<li><font color = "yellow">Statistical mechanics</font> framework for resonant relaxation</li>
+<li>Representation of the background as <font color = "yellow">correlated noise</font></li>
+<li>Derivation of an <font color = "yellow">effective Fokker-Planck</font> equation for a general correlated noise</li>
+<li>Due to general relativity \(2\)-body relaxation wins over resonant relaxation in setting the steady state distribution and loss-cone flux.</li>
+
+</ul>
+<h4 align="left">
+<p>
+When resonant relaxation can be important (To do):
+</p>
+</h4>
+<ul>
+<li>Processes shorter than the two-body relaxation time (e.g., S-Stars)</li>
+<li>Vector resonant relaxation (e.g., warping of stellar or accretion disk)</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+
+<script src="./lib/js/head.min.js"></script>
+<script src="./js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: false,
+progress: true,
+history: true,
+center: false,
+slideNumber: true,
+rollingLinks: true,
+keyboard: true,
+overview: false,
+width: 1366,
+height: 768,
+margin: 0.20,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+ { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+]
+});
+</script>
+</body>
+</html>
