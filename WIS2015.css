@@ -1,3 +1,16 @@
+video {  
+    width: 615px;
+}
+#crop-img { 
+    position: absolute;
+    visibility: visible !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    clip: rect(10px, 290px, 190px, 10px);
+}
+
+
 body {
   background: #000;
   background-color: #000; }
