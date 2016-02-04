@@ -1,6 +1,23 @@
+.fig-title p{
+     font-size: 70%;
+}
+
 video {  
     width: 615px;
 }
+
+.big-video video {  
+    width: 140% !important;
+    max-width: 150% !important;
+    max-height: 150% !important;
+}
+
+.fullsize-video video {  
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
 #crop-img { 
     position: absolute;
     visibility: visible !important;
